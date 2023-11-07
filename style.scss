@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: blue;
+}
+
+a {
+  text-decoration: 0;
+  background-color: #fff;
+  color: blue;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  transition: 0.5px;
+  font-weight: bold;
+  letter-spacing: 2px;
+
+  &:hover{
+    background-color: black;
+    color: aqua;
+  }
+}
+
+.notification {
+  position: fixed;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: whitesmoke;
+  width: 450px;
+  z-index: 100;   
+  padding: 50px;
+  border-radius: 20px;
+  transition: 0.5s;
+  visibility: hidden;
+
+  &.active{
+    visibility: visible;
+    top: 50%;
+  }
+
+}
+
+.dialog_box{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  img{
+    width: 100px;
+  }
+  p,h2{
+    margin: 20px 0;
+    text-align: center;
+  }
+}
+.dialog-inputs{
+  input{
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid blue;
+    outline: 0;
+    border-radius: 10px;
+    font-size: 15px;
+    &[type="submit"]{
+      background-color: blue;
+      color: whitesmoke;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.close{
+  width: 30px;
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  cursor: pointer;
+}
